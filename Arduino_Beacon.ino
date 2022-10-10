@@ -47,7 +47,7 @@ void setup() {
 
 // ----------------------------------------------------
 // ----------------------------------------------------
-void startAdvertising(int cont) {
+void startAdvertising(int cont, string nombreSensor) {
 
    Serial.println( " startAdvertising() " );
 
@@ -78,7 +78,7 @@ void startAdvertising(int cont) {
      'E', 'P', 'S', 'G', '-', 'G', 'T', 'I',
      '-', 'P', 'R', 'O', 'Y', '-', '3', 'A'
      };
-   BLEBeacon elBeacon( beaconUUID, 12, 34, 73 );
+   BLEBeacon elBeacon( beaconUUID, cont, nombreSensor, 73 );
    elBeacon.setManufacturer( 0x004c ); // aple id
    Bluefruit.Advertising.setBeacon( elBeacon );
 
@@ -109,7 +109,7 @@ void loop() {
    cont++;
    delay(1000);
 
-   startAdvertising(cont);
+   startAdvertising(cont, "SensorOzono");
 
    Serial.print( " ** loop cont=" );
    Serial.println( cont );
