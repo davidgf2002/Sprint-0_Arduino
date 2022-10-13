@@ -2,7 +2,6 @@
 // ----------------------------------------------------
 // Ejemplo IBeaconBasico.ino
 // Adaptado de https://learn.adafruit.com/bluefruit-nrf52-feather-learning-guide/adafruitbluefruit
-// Jordi Bataller Mascarell
 // ----------------------------------------------------
 #include <bluefruit.h>
 // ----------------------------------------------------
@@ -47,7 +46,7 @@ void setup() {
 
 // ----------------------------------------------------
 // ----------------------------------------------------
-void startAdvertising(int cont, string nombreSensor) {
+void startAdvertising(int cont, int nombreSensor) {
 
    Serial.println( " startAdvertising() " );
 
@@ -109,7 +108,7 @@ void loop() {
    cont++;
    delay(1000);
 
-   startAdvertising(cont, "SensorOzono");
+   startAdvertising(cont, 1);
 
    Serial.print( " ** loop cont=" );
    Serial.println( cont );
