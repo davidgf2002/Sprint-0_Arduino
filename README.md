@@ -8,3 +8,6 @@ Junto con este proyecto serán necesarios otros dos proyectos, uno para el servi
 - https://github.com/davidgf2002/Sprint-0_App
 - https://github.com/davidgf2002/Sprint-0_Web
 
+
+![image](https://user-images.githubusercontent.com/76249264/195825970-5ef95f08-f120-44d0-87c7-efd4d19f22df.png)
+Los valores que se envían son el valor de la medida y el nombre del sensor
